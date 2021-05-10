@@ -6,7 +6,7 @@ Written by: Henry Dalgleish ([@hwpdalgleish](https://github.com/hwpdalgleish/)) 
 Sequencing software for embedding two-photon optogenetic stimulation in behavioural paradigms that can be imported and run by Lloyd Russell's PyBehaviour behavioural control software (https://github.com/llerussell/PyBehaviour).
 
 ## User interface
-![Imgur](https://imgur.com/cAnZEGH)
+![Imgur](https://imgur.com/cAnZEGH.jpeg)
 
 ## Requirements
 * [ReadYAML](https://github.com/llerussell/ReadYAML) - to read custom system parameters file
