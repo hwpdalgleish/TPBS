@@ -1,0 +1,39 @@
+# Settings to be used by various SLM / Prairie interfacing scripts
+
+# SLM
+TransformFile: ZZ_2DTransform_20200113_nikon16x1p14x.mat
+TransformFile3D: 3DTransform_20190924_1727.mat
+TransformFile3D_9GPs: 3DTransform_20190924_1727.mat
+TForm_X_offset: 0  #  +ve moves points right for OG.  for zoe  (+ve moves burns right relative to targets, -ve moves them left)
+TForm_Y_offset: 5 #  +v moves burns down for OG;   for zoe (-ve moves burns up relative to targets, +ve moves them down) 
+
+SLM_Pixels_X: 512
+SLM_Pixels_Y: 512
+SLM_BitDepth: 8
+ZeroOrderBlockSize_PX: 30
+HologramLibraryName: GenerateHologramCUDA  #was 8
+AutoAdjustWeights: 1  #true
+WeightingFile: 20181210_Satsuma_Leica25x_Bruker1_MaxCoord128_ManuallyDeletedSomePoints.mat
+SteepnessFudgeFactor: 1  # number to increase steepness of weighting function (should be 2)
+
+# Galvo positions (GPLMaker)
+ScanAmp_X: -6.67 6.67 # galvo  new rev: 5 -5; rev40: -6.67 6.67
+ScanAmp_Y: 7.19 -7.19  # new rev: 7.16791979949875; -7.19298245614035 rev40: 7.19 -7.19 
+FOVsize_OpticalZoom: 1.14 # 20181205 no longer used because ScanAmp_X/Y are both taken directly from MarkPoints (incorporate 1.14x zoom factor already)
+FOVsize_PX: 512
+FOVsize_UM_1x: 537.4
+
+#ScanAmp_X: -8.36555 6.82555  # left,right - save a grid gpl
+#ScanAmp_Y: 8.35 -8.15  # top,bottom - save a grid gpl
+
+
+# Mark points (XMLMaker)
+LaserName: Fidelity
+LaserPowerScaleFactor: 1 #1 for AOM, 1.9 for pockels cell
+LaserPowerFile: Bruker1_PowerFile.mat  #mat file containing PV->mW fit
+TriggerLine: PFI1
+VoltageOutputCategoryName: adam
+VoltageOutputExperimentName: 1ms pulse trigout
+
+# RawDataStream
+FlipEvenLines: 0
